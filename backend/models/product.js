@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
-const productoSchema = new mongoose.Schema({
+const productSchema = new mongoose.Schema({
   name: String,
   price: Number,
-  stock: Int,
+  stock: Number,
   registerDate: { type: Date, default: Date.now },
   dbStatus: Boolean,
 });
 
-const producto = mongoose.model("producto", productoSchema);
+const product = mongoose.model("products", productSchema);
 
-export default producto;
+export default product;
